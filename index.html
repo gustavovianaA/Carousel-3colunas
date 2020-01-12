@@ -10,83 +10,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <style>
-
-  .cr_wp_multiplos{
+  .cr_multiplos{
     background : #292323;
     padding : 30px 0 50px 0;
-    overflow : hidden;
-  }
-  .cr_wp_multiplos h2{
-    color : #ffcc00;
-  }
-  .cr_wp_multiplos h3 ,h4 , h5 , h6 , p{
-    color : #fff;
-  }
-  .cr_wp_multiplos .carousel_item_post {
-     padding : 0 10px;
-  }
-  
-  .cr_wp_multiplos .carousel_item_post div{
-     padding : 10px;
-     background : rgba(0,0,0,0.3);
-     border-bottom : 1px solid #ffcc00;
-
-  }
-
-  .cr_wp_multiplos .carousel_item_post img{
+    overflow : hidden;}
+  .cr_multiplos h2{
+    color : #ffcc00;}
+  .cr_multiplos h4 , h5 , h6 , p{
+    color : #fff;}
+  .cr_multiplos .carousel_item_post {
+    padding : 0 10px;}
+  .cr_multiplos .carousel_item_post div{
+    padding : 10px;
+    background : rgba(0,0,0,0.3);
+    border-bottom : 1px solid #ffcc00;
+    transition : .3s;}
+  .cr_multiplos .carousel_item_post div:hover{
+    background : rgba(0,0,0,0.7);}
+  .cr_multiplos .carousel_item_post img{
     width : 80%;
     height : 240px;
     margin : 10px 0 20px 0;
     border-radius : 50%;
-    border : 1px solid #ffcc00;
-    border : 5px solid #ffcc00;
-  }
-  .cr_wp_multiplos  .cr_nome{
+    border : 5px solid #ffcc00;}
+  .cr_multiplos  .cr_nome{
     border-bottom: 1px solid #ffcc00;
     padding : 0 10px;
-    color : #ffff66;
-  }
-  .cr_wp_multiplos .carousel-inner{
-   overflow : visible;
-   word-wrap : break-word; 
-  }
-  .cr-control{
-  color : #000;
-  display:inline-block;
-    -webkit-transform:scale(1,4); /* Safari and Chrome */
-    -moz-transform:scale(1,2); /* Firefox */
-    -ms-transform:scale(1,2); /* IE 9 */
-    -o-transform:scale(1,2); /* Opera */
-    transform:scale(1,2.4); /* W3C */  
+    color : #ffff66;}
+  .cr_multiplos .carousel-inner{
+    overflow : visible;
+    word-wrap : break-word;}
+  .cr_multiplos .cr-control{
+    color : #000;
+    display:inline-block;
     font-weight: 100; 
     font-size: 2em;
-    color : #ffcc00;
-  }
- 
-
+    color : #ffcc00;}
+  .cr_multiplos .carousel-indicators{
+    bottom: -50px;}
   </style>
 
-    <title>Hello, world!</title>
+  <title>Carousel 3 colunas</title>
   </head>
   <body>
  
- <section class="cr_wp_multiplos">   
+ <section class="cr_multiplos">   
 
  <h2 class="text-center py-0 mt-0 mb-4">Seção</h2>
 
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <!--<ol class="carousel-indicators">
-    
+  <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> 
-  
-  </ol>-->
+  </ol>
 
   <div class="carousel-inner">
-    <div class="carousel-item active">
-    <div class="container px-5 ">  
-    <section class="row">      
+    <div class=" carousel-item active">
+    <div class=" container px-5 ">  
+    <section class="cr_cards row">      
     
     <article class="carousel_item_post col-md-4 text-center ">
       <div>
@@ -116,11 +97,11 @@
 
     </section>
     </div>
-    </div>
+    </div> <!-- fim de um item de carousel -->
 
-     <div class="carousel-item ">
-    <div class="container px-5 ">  
-    <section class="row">      
+    <div class="carousel-item ">
+    <div class=" container px-5 ">  
+    <section class="cr_cards row">      
     
     <article class="carousel_item_post col-md-4 text-center ">
       <div>
@@ -151,11 +132,7 @@
     </section>
     </div>
     </div>
-
-  
-    
-    
-  </div>
+  </div> <!-- Fim carousel-inner -->
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="cr-control" aria-hidden="true">&lt;</span>
     <span class="sr-only">Previous</span>
@@ -165,16 +142,61 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
-</section>
+</section><!-- fim cr_multilos -->
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<script>
+// verifica a largura da tela e aplica as modificações
+function isBreakPoint(default3,itemsHtml , bp){
+  if($(window).width() < bp)
+    toOneColumn(itemsHtml); 
+  else
+    toThreeColumn(default3);    
+}
+// ajusta a exibilção mobile para uma coluna
+function toOneColumn(itemsHtml){  
+  var items = '.cr_multiplos .carousel_item_post'; 
+  $('.carousel-inner').html(itemsHtml);
+  $(items).addClass('carousel-item');
+  //adiciona active ao primeiro novo item de carousel
+  $(items).eq(0).addClass("active");
+  //layout
+  $(items).removeClass('col-md-4');
+  //imagem
+  $(items).find('img').css('width','60%')
+  //escreve os indicadores
+  writeIndicators(items);  
+}
+function toThreeColumn(default3){  
+  var items = '.cr_multiplos .carousel-item'; 
+  $('.carousel-inner').html(default3);
+  writeIndicators(items);
+}
+function writeIndicators(items){
+  var n = $(items).length;
+  for(i = 0 ; i < n ; i++){
+    if(i == 0)
+      var cr_indicators =  '<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>';
+    else
+      cr_indicators += ' <li data-target="#carouselExampleIndicators" data-slide-to="'+i+'" ></li>';
+  }
+  $(".carousel-indicators").html(cr_indicators);
+}
+$(document).ready(function(){
+  const breakPoint = 768; // insira a largura de troca para 1 coluna 
+  const default3 = $('.carousel-inner').html();
+  var itemsHtml = $('.cr_cards').eq(0).html() + $('.cr_cards').eq(1).html();
+  isBreakPoint(default3,itemsHtml , breakPoint); //verificar inicialmente  
+  $(window).resize(function(){ 
+  isBreakPoint(default3,itemsHtml , breakPoint); //verificar na mudança de largura
+  });
+});
+</script>
