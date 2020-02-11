@@ -5,50 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-  <style>
-  .cr_multiplos{
-    background : #292323;
-    padding : 30px 0 50px 0;
-    overflow : hidden;}
-  .cr_multiplos h2{
-    color : #ffcc00;}
-  .cr_multiplos h4 , h5 , h6 , p{
-    color : #fff;}
-  .cr_multiplos .carousel_item_post {
-    padding : 0 10px;}
-  .cr_multiplos .carousel_item_post div{
-    padding : 10px;
-    background : rgba(0,0,0,0.3);
-    border-bottom : 1px solid #ffcc00;
-    transition : .3s;}
-  .cr_multiplos .carousel_item_post div:hover{
-    background : rgba(0,0,0,0.7);}
-  .cr_multiplos .carousel_item_post img{
-    width : 80%;
-    height : 240px;
-    margin : 10px 0 20px 0;
-    border-radius : 50%;
-    border : 5px solid #ffcc00;}
-  .cr_multiplos  .cr_nome{
-    border-bottom: 1px solid #ffcc00;
-    padding : 0 10px;
-    color : #ffff66;}
-  .cr_multiplos .carousel-inner{
-    overflow : visible;
-    word-wrap : break-word;}
-  .cr_multiplos .cr-control{
-    color : #000;
-    display:inline-block;
-    font-weight: 100; 
-    font-size: 2em;
-    color : #ffcc00;}
-  .cr_multiplos .carousel-indicators{
-    bottom: -50px;}
-  </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="style.css">
 
   <title>Carousel 3 colunas</title>
   </head>
@@ -65,11 +25,12 @@
   </ol>
 
   <div class="carousel-inner">
+    <!-- Item de carousel -->
     <div class=" carousel-item active">
     <div class=" container px-5 ">  
     <section class="cr_cards row">      
     
-    <article class="carousel_item_post col-md-4 text-center ">
+    <article class="carousel_item_post col-md-4 text-center "> 
       <div>
       <h3><span class="cr_nome">Nome 1</span></h3>
       <img class="" src="http://www.ufcg.edu.br/~biblioteca/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="First slide">
@@ -99,7 +60,8 @@
     </div>
     </div> <!-- fim de um item de carousel -->
 
-    <div class="carousel-item ">
+    <!-- Item de carousel -->
+    <div class="carousel-item "> 
     <div class=" container px-5 ">  
     <section class="cr_cards row">      
     
@@ -125,7 +87,7 @@
       <img class="" src="http://www.ufcg.edu.br/~biblioteca/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="First slide">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et porttitor lacus. Donec vitae facilisis nulla, vel ullamcorper velit. Fusce imperdiet leo a dui pellentesque consectetur. Sed a dignissim risus, quis tincidunt mi. Mauris tincidunt varius fringilla. Suspendisse in aliquam orci. </p>
       </div>
-    </article>
+    </article> <!-- fim de um item de carousel -->
 
   
 
@@ -153,50 +115,4 @@
   </body>
 </html>
 
-<script>
-// verifica a largura da tela e aplica as modificações
-function isBreakPoint(default3,itemsHtml , bp){
-  if($(window).width() < bp)
-    toOneColumn(itemsHtml); 
-  else
-    toThreeColumn(default3);    
-}
-// ajusta a exibilção mobile para uma coluna
-function toOneColumn(itemsHtml){  
-  var items = '.cr_multiplos .carousel_item_post'; 
-  $('.carousel-inner').html(itemsHtml);
-  $(items).addClass('carousel-item');
-  //adiciona active ao primeiro novo item de carousel
-  $(items).eq(0).addClass("active");
-  //layout
-  $(items).removeClass('col-md-4');
-  //imagem
-  $(items).find('img').css('width','60%')
-  //escreve os indicadores
-  writeIndicators(items);  
-}
-function toThreeColumn(default3){  
-  var items = '.cr_multiplos .carousel-item'; 
-  $('.carousel-inner').html(default3);
-  writeIndicators(items);
-}
-function writeIndicators(items){
-  var n = $(items).length;
-  for(i = 0 ; i < n ; i++){
-    if(i == 0)
-      var cr_indicators =  '<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>';
-    else
-      cr_indicators += ' <li data-target="#carouselExampleIndicators" data-slide-to="'+i+'" ></li>';
-  }
-  $(".carousel-indicators").html(cr_indicators);
-}
-$(document).ready(function(){
-  const breakPoint = 768; // insira a largura de troca para 1 coluna 
-  const default3 = $('.carousel-inner').html();
-  var itemsHtml = $('.cr_cards').eq(0).html() + $('.cr_cards').eq(1).html();
-  isBreakPoint(default3,itemsHtml , breakPoint); //verificar inicialmente  
-  $(window).resize(function(){ 
-  isBreakPoint(default3,itemsHtml , breakPoint); //verificar na mudança de largura
-  });
-});
-</script>
+<script src="carousel.js"></script>
