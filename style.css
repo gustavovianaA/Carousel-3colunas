@@ -1,44 +1,15 @@
-  .cr_multiplos{
-    background : #292323;
-    padding : 30px 0 50px 0;
-    overflow : hidden;}
-  .cr_multiplos h2{
-    color : #ffcc00;}
-  .cr_multiplos h4 , .cr_multiplos h5 , .cr_multiplos h6 , .cr_multiplos p{
-    color : #fff;}
-  .carousel_item_post {
-    padding : 0 10px;}
-  .carousel_item_post div{
-    padding : 10px;
-    background : rgba(0,0,0,0.3);
-    border-bottom : 1px solid #ffcc00;
-    transition : .3s;}
-  .carousel_item_post div:hover{
-    background : rgba(0,0,0,0.7);}
-  .carousel_item_post img{
-    width : 80%;
-    height : 240px;
-    margin : 10px 0 20px 0;
-    border-radius : 50%;
-    border : 5px solid #ffcc00;}
-  .cr_nome{
-    border-bottom: 1px solid #ffcc00;
-    padding : 0 10px;
-    color : #ffff66;}
-  .cr_multiplos .carousel-inner{
-    overflow : visible;
-    word-wrap : break-word;}
-  .cr_multiplos .cr-control{
-    color : #000;
-    display:inline-block;
-    font-weight: 100; 
-    font-size: 2em;
-    color : #ffcc00;}
-  .cr_multiplos .carousel-indicators{
-    bottom: -50px;}
-  /* fazer max-width = breakPoint */  
-  @media (max-width: 768px) and (min-width: 576px) { 
-    .carousel_item_post{
-      padding : 0 10%;
-    }
-  }
+.cr_multiplos{background : #292323;padding : 30px 0 50px 0;overflow : hidden;}
+.cr_multiplos h2{color : #ffcc00;}
+.cr_multiplos h4 , .cr_multiplos h5 , .cr_multiplos h6 , .cr_multiplos p{color : #fff;}
+.carousel_item_post {padding : 0 10px;}
+.carousel_item_post div{padding : 10px;background : rgba(0,0,0,0.3);border-bottom : 1px solid #ffcc00;transition : .3s;}
+.carousel_item_post div:hover{background : rgba(0,0,0,0.7);}
+.carousel_item_post img{width : 80%;height : 240px;margin : 10px 0 20px 0;border-radius : 50%;border : 5px solid #ffcc00;}
+.cr_nome{border-bottom: 1px solid #ffcc00;padding : 0 10px;color : #ffff66;}
+.cr_multiplos .carousel-inner{overflow : visible;word-wrap : break-word;}
+.cr_multiplos .cr-control{color : #000;display:inline-block;font-weight: 100; font-size: 2em;color : #ffcc00;}
+.cr_multiplos .carousel-indicators{bottom: -50px;}
+/* fazer max-width = breakPoint */  
+@media (max-width: 768px) and (min-width: 576px) { 
+  .carousel_item_post{padding : 0 10%;}
+}
